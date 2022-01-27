@@ -1,0 +1,2 @@
+define(function(){"use strict";var f;return f=function(n){return!(!n||"object"!=typeof n)&&(!!(window.Promise&&n instanceof Promise)||"function"==typeof n.then)},{load:function(n,o,i){o([n],function(n){var o,t,e;o=function(){i.error.apply(null,arguments)},t=function(){i.apply(null,arguments)},f(n)?(e=n.done||n.then,"function"==typeof n.fail?(e.call(n,t),n.fail(o)):e.call(n,t,o)):i(n)})}}});
+//# sourceMappingURL=../../maps/js/npm-lib/requirejs-promise.hash-a50cf1986a34e4cff949d7848bc1c884.js.map

@@ -1,0 +1,2 @@
+define(["jquery"],function(t){var e={"&amp;":"&","&quot;":'"',"&lt;":"<","&gt;":">"};return{decodeXml:function(t){return t.replace(/(&quot;|&lt;|&gt;|&amp;)/g,function(t,n){return e[n]})},safeString:function(t){return"string"==typeof t?t:""}}});
+//# sourceMappingURL=../../../maps/js/wcs/util/text.hash-9e58c623fe228ee09c5d494231fbc334.js.map

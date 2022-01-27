@@ -1,0 +1,2 @@
+define(["jquery"],function(i){var r=i("iframe.where2getit");i(window).on({scroll:function(t){r.each(function(){var t=i(this);this.getBoundingClientRect().top<=i(window).height()&&(""===t.attr("src")||void 0===t.attr("src"))&&t.data("src")&&t.attr("src",t.data("src"))})}})});
+//# sourceMappingURL=../../maps/js/shared/where-to-get-it.hash-41bcaac9960fe39e438d28e3d48e9f31.js.map

@@ -1,0 +1,2 @@
+define(["jquery","Handlebars"],function(e,r){"use strict";r.registerHelper("highlightTerm",function(e,r){var a=r.toLowerCase(),s=e.toLowerCase();return a===s?'<span class="search-term">'+s+"</span>":a.replace(s,'<span class="search-term">'+s+"</span>")}),r.registerHelper("decodedMarkup",function(e){return e.replace(/&gt;/g,">").replace(/&amp;/g,"&").replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,"<")})});
+//# sourceMappingURL=../../../maps/js/shared/search-autosuggest/search-autosuggest-helpers.hash-fddf05939c8a6625408bd23c4199b1eb.js.map

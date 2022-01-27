@@ -1,0 +1,2 @@
+define(["domReady","wcs.context"],function(e,o){e(function(){try{var e="G"!=o.getUserType(),a="0"!=o.getLoyaltyOptIn(),t=o.getUserId();window.dataLayer=window.dataLayer||{},window.dataLayer.push({user:{memberID:e?t:null,loggedIn:e,loyaltyMember:e&&a}})}catch(e){console.error("Failed push to dataLayer",e)}})});
+//# sourceMappingURL=../../../maps/js/metrics/datalayer/global.hash-86a2209d46d9a9fb4a5d961a895de905.js.map

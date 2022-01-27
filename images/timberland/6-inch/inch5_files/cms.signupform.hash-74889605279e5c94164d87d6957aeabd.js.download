@@ -1,0 +1,2 @@
+define(["jquery","pubsub"],function(e,s){e.pubsub("subscribe","vfdp.aem.footer.emailsignup",function(e,s){if(s.result&&s.response.sfAccountId)try{window.dataLayer.push({event:"sfUserIdentification",sfUserIdentificationSource:"Newsletter Subscription: Footer",sfUserId:s.response.sfAccountId})}catch(e){console.error("Failed push to dataLayer",e)}})});
+//# sourceMappingURL=../../../maps/js/metrics/datalayer/cms.signupform.hash-0e7150a98f4d507de558a8b59f017621.js.map

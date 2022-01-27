@@ -1,0 +1,1 @@
+(function(a){if(!a.Version){a.Version={version:"3.6.2",build:"s7sdk-8677-g1d0c901b57"};(function(){a.Logger.log(a.Logger.INFO,"Adobe Scene7 Viewer SDK %0 (%1)",a.Version.version,a.Version.build)})()}})(s7getCurrentNameSpace());

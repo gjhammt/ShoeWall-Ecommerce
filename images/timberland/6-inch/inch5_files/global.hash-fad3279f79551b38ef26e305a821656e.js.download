@@ -1,0 +1,2 @@
+define(["jquery","wcs.context"],function(n,i){var o=i.getCookie("cn3"),t=i.getCookie("kiosk_id");"1"===o&&void 0!==t&&init()});var hideSignInOptions=function(){$([".unav-myaccount",".unav-signing",".checkout-login-or-register",".checkout-login",".product-loyalty-member-container",".checkout-confirmation-order-content-summary"].toString()).remove()},init=function(){hideSignInOptions()};
+//# sourceMappingURL=../../../maps/js/shared/kiosk/global.hash-970e92c416a3f6c6bed558b20aa5728f.js.map

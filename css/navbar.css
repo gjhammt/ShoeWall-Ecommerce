@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+/* #e0af59 */
+.nav-bar{
+    width: 100%;
+    padding: 20px 0 20px 0;
+    color: #fff;
+    /* color: #000; */
+    background: #0d1321;
+    /* color: rgb(13, 19, 33); */
+    box-shadow: 0 2px 2px -2px rgba(13,19,33,.9);
+}
+
+.nav-bar .nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .main-logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none!important;
+    color: #fff;
+}
+
+
+.nav i{
+    font-size: 40px;
+}
+.nav-bar .nav .nav-links ul li{
+    display: inline;
+    padding: 35px;
+    color: #ffffff;
+    font-size: 18px;
+} 
+.nav-bar ul li a{
+    color: #ffffff;
+    text-decoration: none
+}
+.nav-bar ul li a:hover{
+    text-decoration: underline;
+}
+.nav-links ul li:nth-child(1){
+    color: #fff !important;
+}
+.nav .icons i{
+    font-size: 24px;
+    padding-left: 30px
+}
+.nav .icons i:hover{
+    cursor: pointer;
+}

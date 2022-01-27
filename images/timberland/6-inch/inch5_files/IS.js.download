@@ -1,0 +1,18 @@
+/*!************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2011 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+(function(b){if(!b.Callback){b.Callback=function a(h,g,f,e){this.onSuccess=h;this.onError=g;this.context=f;this.status=e};b.Callback.prototype.cleanUp=function d(){this.onSuccess=b.Callback.noop;this.onError=b.Callback.noop;this.context=b.Callback.noop};b.Callback.pending={};b.Callback.noop=function c(){}}if(!b.IS){b.IS=function(){this.callback=null};b.IS.STATUS_SUCCESS="success";b.IS.STATUS_ERROR="error";b.IS.STATUS_PENDING="pending";b.IS.STATUS_CANCELLED="cancelled";b.IS.prototype.getHttpReq=function(h,i,j,l){var o=this.getHashCode(h);var t=h+"&id="+o+"&handler="+b.namespacePrefix+"s7sdkJSONResponse";this.callback=new b.Callback(i,j,l,b.IS.STATUS_PENDING);var u=new RegExp(/^(?:\/\*jsonp\*\/)?\s*([^()]+)\(([\s\S]+),\s*"[0-9]*"\);?$/gmi);var n=new RegExp(/^{[\s\S]*}$/gmi);var g=new RegExp(/^\[[\s\S]*\]$/gmi);var e=b.namespacePrefix+"s7sdkJSONResponse";var m=this;var s=function(w){return w.replace(/{name : /g,'{"name" : ').replace(/^\$t : /gm,'"$t" : ')};var r=function(B){var D=u.exec(B);if(D){var x=D[1];var C;var w=D[2];if(n.test(w)){C=JSON.parse(w)}else{if(g.test(w)){var A='{"v":'+s(w)+"}";var z=JSON.parse(A);C=z.v}else{var y=JSON.parse('{"v":"'+w.substring(1,w.length-1)+'"}');C=y.v}}if(e==x){m.callback.onSuccess(C,m.callback.context)}else{if(m.callback.onError){m.callback.onError(C,m.callback.context)}}}else{if(m.callback.onError){m.callback.onError({message:B},m.callback.context)}}};if((b.browser.name==="ie")&&(b.browser.version.major<10)){function p(w){var z="";for(var x=0;x<w.length;x++){var y=w.charCodeAt(x);if(y>126){z+=encodeURIComponent(w.charAt(x))}else{z+=w.charAt(x)}}return z}function f(w){if(/^http:.*$/gi.test(window.location.href)&&/^https:.*$/gi.test(w)){return w.replace(/^https:/gi,"http:")}else{return w}}var v=new XDomainRequest();v.ontimeout=v.onerror=function(){if(m.callback.status==b.IS.STATUS_CANCELLED){return}if(m.callback.onError){m.callback.onError({message:""},m.callback.context)}};v.onload=function(){if(m.callback.status==b.IS.STATUS_CANCELLED){return}r(v.responseText)};var q=p(t);q=f(q);v.open("GET",q);setTimeout(function(){v.send()},50)}else{var k=new XMLHttpRequest();k.onreadystatechange=function(){if(this.readyState==4){if(m.callback.status==b.IS.STATUS_CANCELLED){return}if((this.status>=200)&&(this.status<400)){r(this.responseText)}else{if(m.callback.onError){m.callback.onError({message:""},m.callback.context)}}}};k.open("GET",t,true);k.send()}};b.IS.prototype.cancelHttpReq=function(){if((this.callback!=null)&&(this.callback.status==b.IS.STATUS_PENDING)){this.callback.status=b.IS.STATUS_CANCELLED;this.callback.cleanUp()}};b.IS.prototype.getStatus=function(){return this.callback.status};b.IS.prototype.getHashCode=function(k){if(!k||k==""){return 1}var f=0,j=0;for(var e=k.length-1;e>=0;e--){var l=parseInt(k.charCodeAt(e));f=((f<<6)&268435455)+l+(l<<14);if((j=f&266338304)!=0){f=(f^(j>>21))}}return f}}})(s7getCurrentNameSpace());

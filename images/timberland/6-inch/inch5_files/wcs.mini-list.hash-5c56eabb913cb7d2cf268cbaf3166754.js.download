@@ -1,0 +1,2 @@
+define(["jquery","pubsub","promise!wcs.zmetrics"],function(e,c){WCS_CONFIG.get("ANALYTICS::cmEnabled")&&e.pubsub("subscribe","MINICART_CONTENT_RENDER_COMPLETE",function(){try{"undefined"!=typeof shopcartParams&&shopcartParams.map(function(e){cmCreateShopAction5Tag(e.productId,e.productName,e.quantity,e.unitPrice,e.categoryId,e.extraparms),cmDisplayShop5s()})}catch(e){console.error("Failed push to coremetrics",e)}})});
+//# sourceMappingURL=../../../maps/js/metrics/coremetrics/wcs.mini-list.hash-5fa041f96fe7ad899df699cf61a58f9e.js.map
