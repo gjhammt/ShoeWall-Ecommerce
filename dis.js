@@ -1,6 +1,15 @@
 import { products } from './css/products.js';
-
+import '../src/cart/addToCartDOM.js';
+import '../src/cart/setupCart.js';
+import '../src/cart/toggleCart.js';
+import { openCart } from './src/cart/toggleCart.js';
+import { addToCart } from './src/cart/setupCart.js';
+// const allProducts = products;
+// let imgs = document.querySelectorAll('.img');
+let proDes = document.querySelector('.pro-description');
 const allProducts = products;
+let empty = document.querySelector('.empty')
+// console.log(empty)
 
 // console.log(allProducts)
 // free()
@@ -120,10 +129,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 </div>
 
                 <div class="btn-cart">
-                    <button>Add to cart 
+                    <button class="cart-add" data-id=${item.id}>Add to cart 
                         <!-- <i class="fas fa-shopping-cart"></i> -->
                     </button>
-                    <button><i class="fas fa-heart"></i></button>
+                    <!--<button><i class="fas fa-heart"></i></button>-->
                 </div>
             </div>`
         }
@@ -132,3 +141,20 @@ window.addEventListener('DOMContentLoaded', () => {
     des.innerHTML = displayPro;
 
 });
+
+
+proDes.addEventListener('click', (e) => {
+    console.log(e.target)
+    if (e.target.classList.contains('imgSmall')) {
+        let current = e.target.currentSrc;
+        console.log(current)
+        e.target.parentElement.parentElement.nextSibling.innerHTML = `<img src=${current} alt="">`
+    }
+
+    if(e.target.classList.contains('cart-add')){
+        let id = parseInt(e.target.dataset.id)
+        // console.log(id)
+        addToCart(id)
+        openCart()
+    }
+})

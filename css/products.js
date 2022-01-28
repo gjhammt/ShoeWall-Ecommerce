@@ -17,7 +17,7 @@ const products = [
         category : "men's shoe", 
         colors : '2', 
         price : 180, 
-        img :['./images/nike/air-max/max1.jpg', './images/nike/air-max/max2.png', './images/nike/air-max/max3.png', './images/nike/air-max/max.png']
+        img :['./images/nike/air-max/max1.jpg', './images/nike/air-max/max2.png', './images/nike/air-max/max3.png', './images/nike/air-max/max4.png']
     },
     {
         id:13, 
