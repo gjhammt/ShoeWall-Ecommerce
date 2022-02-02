@@ -1,4 +1,4 @@
-import { products } from '../../css/products.js';
+import { products } from '../../data/products.js';
 
 import {
     getStorageItem,
@@ -8,53 +8,17 @@ import {addToCartDOM} from './addToCartDOM.js';
 import { displayProducts } from '../allProducts.js';
 
 const allProducts = products;
-const featuredPro = document.querySelector('.all-products');
-const proName = document.querySelector('.pro-name');
-const filterBtns = document.querySelectorAll('.filter-btn');
-const searchForm = document.querySelector('.search-form');
-const value = document.querySelector('.search');
+// const featuredPro = document.querySelector('.all-products');
+// const proName = document.querySelector('.pro-name');
+// const filterBtns = document.querySelectorAll('.filter-btn');
+// const searchForm = document.querySelector('.search-form');
+// const value = document.querySelector('.search');
 let cartTotalDOM = document.querySelector('.cartTotal')
 let empty = document.querySelector('.empty')
 // const featuredPro = document.querySelector('.all-products');
 
 
 let cart = getStorageItem('cart')
-
-
-// Filter Products
-// filterBtns.forEach((btn) => {
-
-//     btn.addEventListener('click', (e) => {
-//         const brandName = e.currentTarget.dataset.brand;
-//         console.log(brandName)
-//         proName.innerHTML = brandName;
-//         const proBrand = allProducts.filter((pro) => {
-//             // console.log(pro.brand)
-//             if (brandName === pro.brand) {
-//                 // console.log(pro)
-//                 return pro;
-//             }
-//         })
-
-//         // console.log(proBrand.length)
-//         if (brandName === 'all products') {
-//             featuredPro.classList.remove('block')
-//             displayProducts(allProducts, featuredPro)
-//         } else if (proBrand.length === 0) {
-//             console.log('no such brand')
-//             featuredPro.classList.add('block')
-//             featuredPro.innerHTML = `<div class="not-found">
-//         <img src="./images/not-found.svg" alt="" class="blank">
-//         <h2>Sorry, we are working <br>on adding new products <br>of <span class="brand">${brandName}</span></h2>
-//     </div>`
-//         }
-//         else {
-//             featuredPro.classList.remove('block')
-//             displayProducts(proBrand, featuredPro)
-//         }
-
-//     })
-// })
 
 const findProduct = (id) => {
     let product = allProducts.find((product) => product.id === id)
@@ -133,13 +97,6 @@ function decreaseAmount(id) {
     })
     return newAmount
 }
-// const removeLocal = (id) => {
-//     // let cartDom = getStorageItem('cart');
-//     cart = cart.filter((cartItem) => cartItem.id !== id)
-//     console.log(cart)
-//     setStorageItem('cart', cart)
-// }
-
 function setupCartFunctionality() {
     // console.log(e.target)
     empty.addEventListener('click', (e) => {
