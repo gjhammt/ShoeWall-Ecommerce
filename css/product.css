@@ -270,3 +270,37 @@ body{
 .show-overlay{
     visibility: visible
 }
+
+.description{
+    position: relative;
+    top: 60px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tab-nav ul{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between
+    /* flex: 1fr; */
+}
+.tab-nav ul li{
+    /* display: inline; */
+    list-style-type: none;
+    /* padding: 0 40px 0 0; */
+    /* flex: 1fr; */
+}
+
+.selected-tab{
+    border-bottom: 5px solid #0d1321;
+    color: #3E5C76;
+    font-weight: bold;
+}
+
+.description p:nth-child(2){
+    padding: 20px 0;
+}
+
+.description ul{
+    padding: 20px 0;
+}
