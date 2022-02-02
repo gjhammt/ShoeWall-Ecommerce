@@ -1,4 +1,4 @@
-import { products } from '../../css/products.js';
+import { products } from '../../data/products.js';
 import { displayProducts } from '../allProducts.js';
 const searchForm = document.querySelector('.search-form');
 const allProducts = products;
