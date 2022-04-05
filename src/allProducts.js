@@ -1,7 +1,7 @@
 const displayProducts = (products, element) => {
     let displayPro = products.map((pro) => {
         return `<div class="pro-card" data-id=${pro.id}>
-                                    <div class="header">
+                                    <div class="card-header">
                                         <img src=${pro.img[0]} alt="" class="pro-img">
                                     </div>
                                     <div class="body">

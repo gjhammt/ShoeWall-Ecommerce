@@ -7,6 +7,8 @@ import { displayProducts } from './src/allProducts.js';
 // import '../src/filters/filters.js';
 const allProducts = products;
 const featuredPro = document.querySelector('.featured-pro');
+const openSideNav = document.querySelector('.menu-icon')
+const sideNav = document.querySelector('.side-nav')
 
 window.addEventListener('DOMContentLoaded', () => {
     let displayPro = allProducts.filter((pro) => {
@@ -35,3 +37,8 @@ featuredPro.addEventListener('click', (e) => {
     window.open(`./product.html?id=${id}`, '_blank')
     // console.log(e.target.classList.contains('fav'))
 });
+
+openSideNav.addEventListener('click', () => {
+    console.log('side')
+    sideNav.classList.toggle('show-side')
+})
