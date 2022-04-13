@@ -27,9 +27,12 @@ filterBtns.forEach((btn) => {
             console.log('no such brand')
             featuredPro.classList.add('block')
             featuredPro.innerHTML = `<div class="not-found">
-        <img src="./images/not-found.svg" alt="" class="blank">
-        <h2>Sorry, we are working <br>on adding new products <br>of <span class="brand">${brandName}</span></h2>
+       <div class="center">
+            <img src="./images/not-found.svg" alt="" class="blank">
+       </div>
+    <h2>Sorry, we are working <br>on adding new products of <span class="brand">${brandName}</span></h2>
     </div>`
+            
         }
         else {
             featuredPro.classList.remove('block')
@@ -38,3 +41,9 @@ filterBtns.forEach((btn) => {
 
     })
 })
+
+// <img src="./images/not-found.svg" alt="" class="blank">
+
+// <div class="not-found">
+//     <h2>Sorry, we are working <br>on adding new products <br>of <span class="brand">${brandName}</span></h2>
+// </div>

@@ -17,11 +17,11 @@ body{
     padding: 20px 0 20px 0;
     color: #fff !important;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); */
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
-     background: #0d1321;
+     background: #0d1321; */
     /* background: #fff; */
     /* height: 10vh; */
     /* display: flex; */
@@ -29,8 +29,9 @@ body{
 
 
 .all-pro{
+  min-height: 80vh;
     position: relative;
-    top: 100px;
+    top: 30px;
     width: 100%;
 }
 
@@ -42,6 +43,7 @@ body{
 }
 .search{
     padding: 10px;
+    width: 100%;
 }
 .sorting-btns{
     display: flex;
@@ -52,6 +54,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 20px;
 }
 
 .sorting-btns button:hover{
@@ -59,7 +62,8 @@ body{
 }
 .sorting-btns button{
     padding: 10px;
-    border: none    
+    border: none;    
+    flex: 1;
 }
 .products{
     /* width: 100%; */
@@ -172,21 +176,41 @@ body{
 }
 
 .not-found{
-    width: 90%;
+    /* background: url('../images/not-found.svg'); */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 50%;
     margin: 0 auto;
     position: relative;
-    /* height: 70vh; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.center{
+  height: 100%;
+  width: 100%;
 }
 
-.blank{
-    position: relative;
-    /* width: 100%; */
+.center img{
+  width: 100%;
+  height: 100%;
 }
+/* .blank{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* width: 100%; 
+} */
 
 .not-found h2{
-    position: absolute;
-    top: 100px;
-    left: 260px;
+    /* position: absolute;
+    top: 60px;
+    left: 260px; */
+    text-align: center;
     line-height: 1.5;
 }
 
@@ -205,17 +229,29 @@ body{
 
 
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 380px){
     .all-products{
     grid-template-columns: repeat(1, 1fr);
 }
-.sorting-btns{
+/* .sorting-btns{
     flex-direction: row;
     flex-wrap: wrap;
+} */
+.list-pro{
+      display: block;
+    } 
+    .sorting-btns{
+    /* display: flex; */
+    flex-direction: column;
+    /* gap: 1rem; */
+    /* flex-wrap: wrap; */
 }
-
+.sorting-btns div{
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-@media screen and (max-width: 576px) and (min-width:320px){
+}
+@media screen and (max-width: 576px) and (min-width:380px){
     .all-products{
     grid-template-columns: repeat(2, 1fr);
 }
@@ -224,15 +260,18 @@ body{
     } 
     .sorting-btns{
     /* display: flex; */
-    flex-direction: row;
+    flex-direction: column;
     /* gap: 1rem; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
-
-.list-pro{
+.sorting-btns div{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* .list-pro{
   display: flex;
   flex-direction: column;
-}
+} */
 }
 
 @media screen and (max-width: 992px) and (min-width: 576px){
@@ -258,7 +297,7 @@ body{
 }
 @media screen and (max-width: 1200px) and (min-width: 992px){
        .all-products{
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 .list-pro{
       display: flex;

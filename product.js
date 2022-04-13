@@ -11,7 +11,7 @@ const allProducts = products;
 // let empty = document.querySelector('.empty')
 const des = document.querySelector('.pro-description')
 let searchId = window.location.search;
-
+console.log(searchId)
 let spliced = Number(searchId.slice(4))
 // console.log(spliced)
   
