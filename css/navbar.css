@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
-/* #e0af59 */
 .nav-bar{
     width: 100%;
     padding: 1.25rem 0 1.25rem 0;
@@ -35,11 +26,13 @@
     cursor: pointer;
     text-decoration: none!important;
     color: #fff;
+    cursor: pointer;
 }
 
 
 .nav i{
     font-size: 40px;
+    cursor: pointer;
 }
 .nav-bar .nav .nav-links ul li{
     display: inline;
@@ -49,10 +42,16 @@
 } 
 .nav-bar ul li a{
     color: #ffffff;
-    text-decoration: none
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 600ms ease-in-out;
 }
 .nav-bar ul li a:hover{
     text-decoration: underline;
+}
+
+.nav-bar ul li a.active{
+  text-decoration: underline;
 }
 .nav-links{
     display: none;
@@ -68,9 +67,9 @@
     font-size: 24px;
     padding-left: 30px
 }
-.nav .icons i:hover{
+/* .nav .icons i:hover{
     cursor: pointer;
-}
+} */
 
 .menu-icon{
   display: block !important;
@@ -92,15 +91,19 @@
 }
 
 .side-nav{
-    height: 0;
+  height: 0;
     overflow: hidden;
-    transition: 0.5s ease-in-out all;
+    transition: height 0.4s ease-in-out;
+    z-index: 5;
 }
+/* .hide-side{
+  height: 0;
+} */
 
 .show-side{
     height: 222px;
-    transition: 0.8s ease-in-out all;
-    overflow: visible;
+    transition: height 0.4s ease-in-out;
+    /* overflow: visible; */
 }
 @media screen and (min-width: 992px){
     .nav-links{

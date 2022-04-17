@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
-/* #e0af59 */
-
 .cart-overlay {
   position: fixed;
   top: 0;
@@ -17,8 +8,8 @@
   color: #000;
   background: rgba(0, 0, 0, 0.5);
   z-index:12;
-  transition: all 0.3s linear;
-  visibility: hidden;
+  /* transition: all 100ms linear; */
+  /* visibility: hidden; */
 }
 
 .cart{
@@ -30,13 +21,13 @@
     top: 0;
     z-index: 12;
     transform: translateX(100%);
-    transition: all 0.3s linear;
+    transition: transform 900ms ease;
     overflow: scroll;
     overflow-x: hidden;
-    /* scrollbar-width:  */
+    /* scrollbar-width: none; */
 }
 .cart::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .fa-times{
@@ -98,9 +89,9 @@
     transform: translateX(0)
 }
 
-.show-overlay{
-    visibility: visible
-}
+/* .show-overlay{
+    visibility: visible;
+} */
 .empty{
     /* position: relative; */
     max-height: 80vh;
@@ -129,6 +120,53 @@ display: none;
     height: 100vh;
     overflow-y: hidden;
 }
+
+
+
+
+.has-fade {
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 600ms ease-in-out forwards;
+}
+
+
+
+
 
 @media screen and (max-width: 320px){
     .cart{

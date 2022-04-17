@@ -14,7 +14,6 @@ const addToCartDOM = ({ id, title, price, img, amount }) => {
             <div class="detail">
                 <h3>${title}</h3>
                 <h6>Color - White</h6><br>
-                <h6>Size - 8</h6>
                 <div class="icon">
                     <div class="quantity">
                         <i class="fas fa-minus" data-id=${id}></i>

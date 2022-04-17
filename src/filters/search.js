@@ -5,7 +5,7 @@ const searchForm = document.querySelector('.search-form');
 const allProducts = products;
 const featuredPro = document.querySelector('.all-products');
 const value = document.querySelector('.search');
-const proName = document.querySelector('.pro-name');
+// const proName = document.querySelector('.pro-name');
 searchForm.addEventListener('keyup', () => {
     // proName.innerHTML = '';
     featuredPro.classList.remove('block')
@@ -37,4 +37,4 @@ searchForm.addEventListener('keyup', () => {
     }
 })
 
-// <!--<img src="./images/not-found.svg" alt="" class="blank">-->
+

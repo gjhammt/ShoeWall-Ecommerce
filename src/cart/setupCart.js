@@ -8,11 +8,6 @@ import {addToCartDOM} from './addToCartDOM.js';
 import { displayProducts } from '../allProducts.js';
 
 const allProducts = products;
-// const featuredPro = document.querySelector('.all-products');
-// const proName = document.querySelector('.pro-name');
-// const filterBtns = document.querySelectorAll('.filter-btn');
-// const searchForm = document.querySelector('.search-form');
-// const value = document.querySelector('.search');
 let cartTotalDOM = document.querySelector('.cartTotal')
 let empty = document.querySelector('.empty')
 // const featuredPro = document.querySelector('.all-products');

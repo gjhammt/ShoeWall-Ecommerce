@@ -1,6 +1,6 @@
 import { products } from '../../data/products.js';
 import { displayProducts } from '../allProducts.js';
-const searchForm = document.querySelector('.search-form');
+// const searchForm = document.querySelector('.search-form');
 const allProducts = products;
 const featuredPro = document.querySelector('.all-products');
 const proName = document.querySelector('.pro-name');
@@ -42,8 +42,3 @@ filterBtns.forEach((btn) => {
     })
 })
 
-// <img src="./images/not-found.svg" alt="" class="blank">
-
-// <div class="not-found">
-//     <h2>Sorry, we are working <br>on adding new products <br>of <span class="brand">${brandName}</span></h2>
-// </div>

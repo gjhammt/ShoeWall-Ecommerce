@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Product</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/cart.css">
-    <link rel="stylesheet" href="./css/product.css">
-    <!-- <script defer type="module" src="product.js"></script> -->
-</head>
+    <!-- FONT AWESOME ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Stylesheet for the navbar -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <!-- Stylesheet for the cart -->
+    <link rel="stylesheet" href="./css/cart.css" />
+    <!-- Stylesheet for the single product page(description of the product) -->
+    <link rel="stylesheet" href="./css/product.css" />
+    <script defer type="module" src="product.js"></script>
+  </head>
 
-<body>
+  <body>
     <div class="nav-bar">
-        <div class="nav">
-            <h1 class="main-logo"><a href="index.html">SW<i class="fas fa-shoe-prints"></i></a></h1>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="allproducts.html">All Products</a></li>
-                    <li><a href="#">New Releases</a></li>
-                    <li><a href="#">Sale</a></li>
-                </ul>
-            </div>
-            <div class="icons">
-                <i class="fas fa-search"></i>
-                <!-- <i class="fas fa-heart"></i> -->
-                <i class="fas fa-shopping-cart cart-icon"></i>
-            </div>
+      <div class="nav">
+        <h1 class="main-logo">
+          <a href="index.html">SW<i class="fas fa-shoe-prints"></i></a>
+        </h1>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="allproducts.html">All Products</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
         </div>
+        <div class="icons">
+          <i class="fas fa-shopping-cart cart-icon"></i>
+          <i class="fas fa-bars menu-icon"></i>
+        </div>
+      </div>
     </div>
-    <div class="cart-overlay">
-        <div class="cart">
-            <div class="cart-header">
-                <i class="fas fa-times close-cart"></i>
-                <h1>Your Cart</h1>
-            </div>
-            <div class="empty"></div>
-            <!-- <div class="cart-pro">
+    <div class="side-nav">
+      <div class="navbar">
+        <ul class="navi-link">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="allproducts.html" class="nav-link">All Products</a></li>
+          <li><a href="#" class="nav-link">New Releases</a></li>
+          <li><a href="#" class="nav-link">Sale</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cart-overlay has-fade">
+      <div class="cart">
+        <div class="cart-header">
+          <i class="fas fa-times close-cart"></i>
+          <h1>Your Cart</h1>
+        </div>
+        <div class="empty"></div>
+        <!-- Product markup in the cart -->
+        <!-- <div class="cart-pro">
                 <div class="product">
                     <img src="./images/nike/air-force-1/air-force-1-shoe-sPqktH.jpg" width="300px" alt="">
                 </div>
@@ -63,11 +83,64 @@
                     
                 </div>
             </div> -->
-            <div class="cartTotal"></div>
-        </div>
+        <div class="cartTotal"></div>
+      </div>
     </div>
     <div class="pro-description">
-        <!-- <div class="pro-imgs">
+      <!-- Single procduct header markup -->
+            <!-- <div class="des-center">
+                  <div class="img img1">
+                        <img src="./images/nike/air-force-1/air-force-1-shoe-sPqktH.jpg" alt="" >
+                    </div>
+                    <div class="img img2">
+                        <img src="./images/nike/air-force-1/img2.jpg" alt="">
+                    </div>
+                    <div class="img img3">
+                        <img src="./images/nike/air-force-1/img3.jpg" alt="">
+                    </div>
+                    <div class="img img4">
+                        <img src="./images/nike/air-force-1/img4.jpg" alt="">
+                    </div>
+                    <div class="img-container">
+                      <img src="./images/nike/air-force-1/img3.jpg" alt="">
+                    </div>
+            </div>
+            <div class="pro-des">
+                <h4>Men | Shoes</h4>
+                <h1>Air Force 1</h1>
+                <h3>$120</h3>
+                <h5>Colors</h5>
+                <div class="colors">
+                    <div class="col red"></div>
+                    <div class="col blue"></div>
+                    <div class="col black"></div>
+                </div>
+                <!-- <div class="size">
+                    
+                    <button class="size-btn">7.5</button>
+                    <button class="size-btn">8</button>
+                    <button class="size-btn">8.5</button>
+                    <button class="size-btn">9</button>
+                    <button class="size-btn">9.5</button>
+                    <button class="size-btn">10</button>
+                </div> 
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <div class="btn-cart">
+                    <button>Add to cart 
+                    <i class="fas fa-shopping-cart"></i> 
+                    </button>
+                    <button><i class="fas fa-heart"></i></button>
+                </div>
+              </div> -->
+    </div>        
+              <!-- <div class="pro-imgs">
                 <div class="all-imgs">
                     <div class="img">
                         <img src="./images/nike/air-force-1/air-force-1-shoe-sPqktH.jpg" alt="">
@@ -83,100 +156,165 @@
                     </div>
                 </div>
                 <div class="this-pro">
-                    <img src="./images/nike/air-force-1/img3.jpg" alt="">
+                    <div class="img-container">
+                      <img src="./images/nike/air-force-1/img3.jpg" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="pro-des">
-                <h4>Men | Shoes</h4>
-                <h1>Air Force 1</h1>
-                <h3>$120</h3>
-                <h5>Colors</h5>
-                <div class="colors">
-                    <div class="col red"></div>
-                    <div class="col blue"></div>
-                    <div class="col black"></div>
-                </div>
-                <div class="size">
-                    
-                    <button class="size-btn">7.5</button>
-                    <button class="size-btn">8</button>
-                    <button class="size-btn">8.5</button>
-                    <button class="size-btn">9</button>
-                    <button class="size-btn">9.5</button>
-                    <button class="size-btn">10</button>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-
-                <div class="btn-cart">
-                    <button>Add to cart 
-                    <i class="fas fa-shopping-cart"></i> 
-                    </button>
-                    <button><i class="fas fa-heart"></i></button>
-                </div>
-            </div> -->
-    </div>
+              </div> -->
+              
+          
+    <!-- </div> -->
     <div class="description">
-        <nav class="tab-nav">
-            <ul>
-                <li class="selected-tab">Description</li>
-                <li>Details</li>
-                <li>Material & Specs</li>
-                <li>Reviews</li>
-            </ul>
-        </nav>
-        <div class="describe">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nam tempore quo, enim iste itaque ipsa quaerat
-                doloribus! Quisquam dolorem incidunt qui placeat quis earum quia consectetur repellendus accusamus aliquam.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda animi quibusdam perferendis provident magnam
-                laboriosam vitae nemo, maiores error dolorum!</p>
-            <ul>
-                <li>Lightweight upper includes breathable mesh overlays.</li>
-                <li>Sockliner adds a layer of cushioning.</li>
-                <li>Colour Shown: Mesa Orange/Black/Grey</li>
-                <li>Fog/Black Style: DN4919-800</li>
-                <li>Country/Region of Origin: Vietnam</li>
-            </ul>
+      <nav class="tab-nav">
+        <ul>
+          <li class="selected-tab">Description</li>
+          <li >Details</li>
+          <!-- <li>Material & Specs</li> -->
+          <li>Reviews</li>
+        </ul>
+      </nav>
+      <div class="describe content show">
+        <p>
+          Running is your daily ritual, with every step taking you closer to your personal goal. Let the Nike Air Zoom Pegasus 39 help you ascend to new heights—whether you're training or jogging—with its intuitive design. More lightweight up top than the Pegasus 38 and ideal to wear in any season, it has a supportive sensation to help keep your feet contained, while underfoot cushioning and double Zoom Air units (1 more than the Peg 38) give you an extra pop to your step. Your trusted workhorse with wings is back. Time to fly.
+        </p>
+        <!-- <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          animi quibusdam perferendis provident magnam laboriosam vitae nemo,
+          maiores error dolorum!
+        </p> -->
+        <ul>
+          <li>Colour Shown: Iris Whisper/Summit White/Light Madder Root/Madder Root</li>
+<li>Style: DH4072-501</li>
+        </ul>
+        
+      </div>
+      <div class="details content">
+        <div class="details-text">
+          <div class="text-description">
+            <h3>Total Comfort</h3>
+
+<p>Extra padding at the tongue and collar helps keep your foot feeling comfortable. We also placed engineered mesh—which is stronger and more flexible than regular mesh—throughout the top for lightweight breathability.</p>
+
+          </div>
+          <div class="text-description">
+            <h3>Supportive Steps</h3>
+
+<p>Flywire technology is integrated with a midfoot band for total support that helps keep your feet in place.</p>
+
+
+          </div>
+          <div class="text-description">
+            <h3>Snap, Run and Pop</h3>
+
+<p>Nike React technology is a lightweight, durable foam that delivers a smooth, responsive ride. We paired it with an Air Zoom unit at the forefoot and heel for an energised feel.</p>
+
+          </div>
+<ul>
+          <li>Lightweight upper includes breathable mesh overlays.</li>
+          <li>Sockliner adds a layer of cushioning.</li>
+          <li>Colour Shown: Mesa Orange/Black/Grey</li>
+          <li>Fog/Black Style: DN4919-800</li>
+          <li>Country/Region of Origin: Vietnam</li>
+        </ul>
+
+
+
         </div>
-        <div class="details">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus maiores aperiam dicta quam eveniet quae minus vel culpa
-                aut tempore exercitationem quos possimus maxime, excepturi, sunt numquam. Nemo, explicabo! Quod?
-            </p>
+        <!-- <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          maiores aperiam dicta quam eveniet quae minus vel culpa aut tempore
+          exercitationem quos possimus maxime, excepturi, sunt numquam. Nemo,
+          explicabo! Quod?
+        </p> -->
+      </div>
+      <!-- <div class="material content">
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+        </ul>
+      </div> -->
+      <div class="reviews content">
+        <div class="single-review">
+          <div class="user">
+            <div class="profile">
+              <i class="fas fa-user"></i> 
+            </div>
+            <div class="user-data">
+              <h2>Gurpreet</h2>
+              <span class="stars">
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              </span>
+            </div>
+          </div>
+        <p>
+          <h3>Heading for the review <span class="timestamp">  Mar 22</span></h3>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
+          fugiat, asperiores commodi iure sed est ut facilis deleniti aperiam
+          ratione? Accusantium dolorem enim provident tempore fugit!
+          Reprehenderit optio esse tempora.
+        </p>
         </div>
-        <div class="material">
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-            </ul>
+        <div class="single-review">
+          <div class="user">
+            <div class="profile">
+              <i class="fas fa-user"></i> 
+            </div>
+            <div class="user-data">
+              <h2>Sukhdeep</h2>
+              <span class="stars">
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              </span>
+            </div>
+          </div>
+        <p>
+          <h3>Heading for the review <span class="timestamp">  Mar 22</span></h3>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
+          fugiat, asperiores commodi iure sed est ut facilis deleniti aperiam
+          ratione? Accusantium dolorem enim provident tempore fugit!
+          Reprehenderit optio esse tempora.
+        </p>
         </div>
-        <div class="reviews">
-            <h3><i class="fas fa-user"></i> Harry</h3>
-            <span class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </span>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam fugiat, asperiores commodi iure sed est
-                ut facilis deleniti aperiam ratione? Accusantium dolorem enim provident tempore fugit! Reprehenderit optio
-                esse tempora.</p>
+        <div class="single-review">
+          <div class="user">
+            <div class="profile">
+              <i class="fas fa-user"></i> 
+            </div>
+            <div class="user-data">
+              <h2>Harry</h2>
+              <span class="stars">
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              <i class="fas fa-star stars-count"></i>
+              </span>
+            </div>
+          </div>
+        <p>
+          <h3>Heading for the review <span class="timestamp">  Mar 22</span> </h3>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
+          fugiat, asperiores commodi iure sed est ut facilis deleniti aperiam
+          ratione? Accusantium dolorem enim provident tempore fugit!
+          Reprehenderit optio esse tempora.
+        </p>
         </div>
+      </div>
     </div>
-
-    <script type="module" src="product.js"></script>
-</body>
-
+    
+    <!-- <script type="module" src="product.js"></script> -->
+  </body>
 </html>

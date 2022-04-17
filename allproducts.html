@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/cart.css">
-    <link rel="stylesheet" href="./css/allpro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script type="module" src="allProducts.js"></script>
-        <!-- <script type="module" src="main.js"></script> -->
-</head>
-<body>
+    <!-- FONT AWESOME ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Stylesheet for the navbar -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <!-- Stylesheet for the cart -->
+    <link rel="stylesheet" href="./css/cart.css" />
+    <!-- Stylesheet for the all products page -->
+    <link rel="stylesheet" href="./css/allpro.css" />
+
+    <script defer type="module" src="allProducts.js"></script>
+    <!-- <script type="module" src="main.js"></script> -->
+  </head>
+  <body>
     <nav class="nav-bar">
-        <div class="nav">
-            <h1 class="main-logo"><a href="index.html">SW<i class="fas fa-shoe-prints"></i></a></h1>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="allproducts.html">All Products</a></li>
-                    <li><a href="#">New Releases</a></li>
-                    <li><a href="#">Sale</a></li>
-                </ul>
-            </div>
-            <div class="icons">
-                <!-- <i class="fas fa-search"></i> -->
-                <!-- <i class="fas fa-heart"></i> -->
-                <i class="fas fa-shopping-cart cart-icon"></i>
-                <i class="fas fa-bars menu-icon"></i>
-            </div>
+      <div class="nav">
+        <h1 class="main-logo">
+          <a href="index.html">SW<i class="fas fa-shoe-prints"></i></a>
+        </h1>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="allproducts.html" class="active">All Products</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Sale</a></li>
+          </ul>
         </div>
+        <div class="icons">
+          <i class="fas fa-shopping-cart cart-icon"></i>
+          <i class="fas fa-bars menu-icon"></i>
+        </div>
+      </div>
     </nav>
-    <div class="cart-overlay">
-    
-        <div class="cart">
-           <div class="cart-header">
-                <i class="fas fa-times close-cart"></i>
-                <h1>Your Cart</h1>
-           </div>
-            <div class="empty">
-               
-            </div>
-            <!-- <div class="cart-pro">
+    <div class="side-nav">
+      <div class="navbar">
+        <ul class="navi-link">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="allproducts.html" class="nav-link">All Products</a></li>
+          <li><a href="#" class="nav-link">New Releases</a></li>
+          <li><a href="#" class="nav-link">Sale</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cart-overlay has-fade">
+      <div class="cart">
+        <div class="cart-header">
+          <i class="fas fa-times close-cart"></i>
+          <h1>Your Cart</h1>
+        </div>
+        <div class="empty"></div>
+        <!-- <div class="cart-pro">
                 <div class="product">
                     <img src="./images/nike/air-force-1/air-force-1-shoe-sPqktH.jpg" width="300px" alt="">
                 </div>
@@ -66,209 +83,131 @@
     
                 </div>
             </div> -->
-            <div class="cartTotal"></div>
-        </div>
-        
+        <div class="cartTotal"></div>
+      </div>
     </div>
     <main class="all-pro">
-        <div class="list-pro">
-            <div class="sorting-btns">
-                <form action="" class="search-form">
-                    <input type="text" placeholder="Search Product Name..." class="search">
-                </form> 
-<div>
-                    <button class="filter-btn" data-brand="all products">All</button>
-                    <button class="filter-btn" data-brand="nike">Nike</button>
-                    <button class="filter-btn" data-brand="adidas">Adidas</button>
-                    <button class="filter-btn" data-brand="jordon">Jordon</button>
-                    <button class="filter-btn" data-brand="converse">Converse</button>
-                    <button class="filter-btn" data-brand="vans">Vans</button>
-                    <button class="filter-btn" data-brand="timberland">Timberland</button>
-</div>
-            </div>
-            <div class="pro-display">
-                <h1 class="pro-name">All Products</h1>
-                <section class="products">
-                    <div class="all">
-                        <!-- <h1 class="head">Featured Products</h1> -->
-                        <div class="all-products">
-
-                            <!--
-                            <div class="pro-card">
-                                <div class="header">
-                                    <img src="./images/nike/air-force-1/img1.png" alt="" class="pro-img">
-                                </div>
-                                <div class="body">
-                                    <h3>Air Force 1</h3>
-                                    <h6>Men's Shoe</h6>
-                                    <h6>3 Colors</h6>
-                                    <h3>$120</h3>
-                                    <i class="fas fa-heart"></i>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                
-                            </div>
-                            <div class="pro-card">
-                                <div class="header">
-                                    <img src="./images/adidas/ultraboost/ultraboost1.png" alt="" class="flip">
-                                </div>
-                                <div class="body">
-                                    <h3>Ultraboost 21</h3>
-                                    <h6>Men's Shoe</h6>
-                                    <h6>2 Colors</h6>
-                                    <h3>$250</h3>
-                                    <i class="fas fa-heart"></i>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                            </div>
-                            <div class="pro-card">
-                                <div class="header">
-                                    <img src="./images/jordon/New folder/jordon1.jpg" alt="">
-                                </div>
-                                <div class="body">
-                                    <h3>Jordon MA2 Paris</h3>
-                                    <h6>Men's Shoe</h6>
-                                    <h6>3 Colors</h6>
-                                    <h3>$165</h3>
-                                    <i class="fas fa-heart"></i>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                            </div>
-                            <div class="pro-card">
-                                <div class="header">
-                                    <img src="./images/jordon/delta2/delta1.jpg" alt="">
-                                </div>
-                                <div class="body">
-                                    <h3>Jordon Delta 2</h3>
-                                    <h6>Men's Shoe</h6>
-                                    <h6>1 Colors</h6>
-                                    <h3>$170</h3>
-                                    <i class="fas fa-heart"></i>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                            </div>
-                            <div class="pro-card">
-                                <div class="header">
-                                    <img src="./images/vans/skool/old1n.png" alt="" class="flip">
-                                </div>
-                                <div class="body">
-                                    <h3>Old skool</h3>
-                                    <h6>Men's Shoe</h6>
-                                    <h6>2 Colors</h6>
-                                    <h3>$90</h3>
-                                    <i class="fas fa-heart"></i>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                
-                            </div>
-                            <div class="pro-card">
-                                <div class="header">
-                                    <img src="./images/converse/lopez/lopez1n.png" alt="" class="flip">
-                                </div>
-                                <div class="body">
-                                    <h3>Lopez</h3>
-                                    <h6>Men's Shoe</h6>
-                                    <h6>1 Colors</h6>
-                                    <h3>$140</h3>
-                                    <i class="fas fa-heart"></i>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </div>
-                            </div> -->
-                        </div> 
-                    </div>
-                </section>
-            </div>
+      <div class="list-pro">
+        <div class="sorting-btns">
+          <form action="" class="search-form">
+            <input
+              type="text"
+              placeholder="Search Product Name..."
+              class="search"
+            />
+          </form>
+          <div>
+            <button class="filter-btn" data-brand="all products">All</button>
+            <button class="filter-btn" data-brand="nike">Nike</button>
+            <button class="filter-btn" data-brand="adidas">Adidas</button>
+            <button class="filter-btn" data-brand="jordon">Jordon</button>
+            <button class="filter-btn" data-brand="converse">Converse</button>
+            <button class="filter-btn" data-brand="vans">Vans</button>
+            <button class="filter-btn" data-brand="timberland">
+              Timberland
+            </button>
+          </div>
         </div>
+        <div class="pro-display">
+          <h1 class="pro-name">All Products</h1>
+          <section class="products">
+            <div class="all">
+              <div class="all-products">
+                <!-- Single product card -->
+                <!-- 
+                    <div class="pro-card">
+                        <div class="header">
+                            <img
+                            src="./images/nike/air-force-1/img1.png"
+                            alt=""
+                            class="pro-img"
+                            />
+                        </div>
+                        <div class="body">
+                            <h3>Air Force 1</h3>
+                            <h6>Men's Shoe</h6>
+                            <h6>3 Colors</h6>
+                            <h3>$120</h3>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div> 
+                -->
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
-<!-- <div class="size-modal">
-    <h1>Select Your Shoe Size</h1>
-    <div class="size">
-        <!-- <button class="size-btn">7</button> 
-        <button class="size-btn">7.5</button>
-        <button class="size-btn">8</button>
-        <button class="size-btn">8.5</button>
-        <button class="size-btn">9</button>
-        <button class="size-btn">9.5</button>
-        <button class="size-btn">10</button>
-    </div>
-
-    <button class="add">Add To Cart</button>
-</div> -->
-    <!-- <div class="not-found">
-       <div class="center">
-            <img src="./images/not-found.svg" alt="" class="blank">
-       </div>
-    <h2>Sorry, no product <br> matches your search</h2>
-    </div> -->
     <footer class="footer">
-        <div class="footer-addr">
-            <h1 class="footer-logo">ShoeWall <i class="fas fa-shoe-prints"></i></h1>
-            <h2>Contact</h2>
-            <address>
-                1430 Notre Dame West, H4R1H0<br>
-                <a class="footer-btn" href="mailto:example@gmail.com">Email Us</a>
-            </address>
-        </div>
-    
-        <ul class="footer-nav">
-            <li class="nav-item">
-                <h2 class="nav-title">Links</h2>
-                <ul class="nav-ul">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="allproducts.html">All Products</a>
-                    </li>
-                    <li>
-                        <a href="#">New Releases</a>
-                    </li>
-                    <li>
-                        <a href="#">Sales</a>
-                    </li>
-                </ul>
+      <div class="footer-addr">
+        <h1 class="footer-logo">ShoeWall <i class="fas fa-shoe-prints"></i></h1>
+        <h2>Contact</h2>
+        <address>
+          1430 Notre Dame West, H4R1H0<br />
+          <a class="footer-btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+
+      <ul class="footer-nav">
+        <li class="nav-item">
+          <h2 class="nav-title">Links</h2>
+          <ul class="nav-ul">
+            <li>
+              <a href="index.html">Home</a>
             </li>
-    
-            <li class="nav-item">
-                <h2 class="nav-title">About Us</h2>
-                <ul class="nav-ul ">
-                    <li>
-                        <a href="#">News</a>
-                    </li>
-                    <li>
-                        <a href="#">Careers</a>
-                    </li>
-                    <li>
-                        <a href="#">Inverstors</a>
-                    </li>
-                    <li>
-                        <a href="#">Sustainability</a>
-                    </li>
-                </ul>
+            <li>
+              <a href="allproducts.html">All Products</a>
             </li>
-    
-            <li class="nav-item">
-                <h2 class="nav-title">Legal</h2>
-    
-                <ul class="nav-ul">
-                    <li>
-                        <a href="#">Privacy Policy</a>
-                    </li>
-    
-                    <li>
-                        <a href="#">Terms of Use</a>
-                    </li>
-    
-                    <li>
-                        <a href="#">Sitemap</a>
-                    </li>
-                </ul>
+            <li>
+              <a href="#">New Releases</a>
             </li>
-        </ul>
-    
-        <div class="legal">
-            <p>&copy; 2022 Something. All rights reserved.</p>
-        </div>
+            <li>
+              <a href="#">Sales</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <h2 class="nav-title">About Us</h2>
+          <ul class="nav-ul">
+            <li>
+              <a href="#">News</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Inverstors</a>
+            </li>
+            <li>
+              <a href="#">Sustainability</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <h2 class="nav-title">Legal</h2>
+
+          <ul class="nav-ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2022 Something. All rights reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

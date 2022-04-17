@@ -7,7 +7,7 @@ const displayProducts = (products, element) => {
                                     <div class="body">
                                         <h3>${pro.title}</h3>
                                         <h6>${pro.category}</h6>
-                                        <h6>${pro.colors}</h6>
+                                        <h6>Colors - ${pro.colors}</h6>
                                         <h3>$${pro.price}</h3>
                                         <!--<i class="fas fa-heart"></i>-->
                                         <i class="fas fa-shopping-cart add-cart" data-id=${pro.id}></i>
