@@ -9,7 +9,7 @@ const value = document.querySelector('.search');
 searchForm.addEventListener('keyup', () => {
     // proName.innerHTML = '';
     featuredPro.classList.remove('block')
-    const inputVal = value.value;
+    const inputVal = value.value.toLocaleLowerCase();
     if (inputVal) {
         const newStore = products.filter((pro) => {
             let { title, brand } = pro;

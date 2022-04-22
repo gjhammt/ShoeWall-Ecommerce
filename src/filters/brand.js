@@ -8,7 +8,18 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 
 filterBtns.forEach((btn) => {
     // console.log(btn)
+    // console.log(btn.classList);
     btn.addEventListener('click', (e) => {
+
+        filterBtns.forEach((button) => {
+            if(button.classList.contains("active")) {
+          button.classList.remove("active");
+          console.log(true)
+        }
+        })
+        
+        console.log(btn.classList)
+        e.currentTarget.classList.toggle('active')
         const brandName = e.currentTarget.dataset.brand;
         // console.log(brandName)
         proName.innerHTML = brandName;

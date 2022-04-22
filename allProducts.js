@@ -18,19 +18,35 @@ const featuredPro = document.querySelector(".all-products");
 const proName = document.querySelector(".pro-name");
 const openSideNav = document.querySelector(".menu-icon");
 const sideNav = document.querySelector(".side-nav");
+const filterBtns = document.querySelectorAll('.filter-btn')
 let searchId = window.location.search;
 console.log(searchId);
 let spliced = searchId.slice(7);
-console.log(typeof spliced);
+console.log(spliced);
 window.addEventListener("DOMContentLoaded", () => {
   featuredPro.classList.remove("block");
+  
   if (spliced === "") {
+    filterBtns.forEach((btn) => {
+      if (btn.dataset.brand == "all products") {
+        console.log(btn);
+        btn.classList.toggle("active");
+      }
+    });
     displayProducts(allProducts, featuredPro);
     return;
   }
   proName.innerHTML = spliced;
+  filterBtns.forEach((btn) => {
+    if (btn.dataset.brand == spliced) {
+      console.log(btn);
+      btn.classList.toggle("active");
+    }
+  });
   let displayProduct = allProducts.filter((item) => {
     if (item.brand === spliced) {
+      
+      console.log(item)
       return item;
     }
     // else if(item.brand !== spliced){

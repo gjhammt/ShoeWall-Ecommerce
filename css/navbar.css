@@ -101,7 +101,7 @@
 } */
 
 .show-side{
-    height: 222px;
+    height: 221px;
     transition: height 0.4s ease-in-out;
     /* overflow: visible; */
 }
