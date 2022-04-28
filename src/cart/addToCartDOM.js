@@ -9,7 +9,7 @@ const addToCartDOM = ({ id, title, price, img, amount }) => {
     newDiv.innerHTML =
         `<div class="cart-pro" data-id=${id}>
             <div class="product">
-                <img src=${img[0]} width="300px" alt="">
+                <img src=${img[0]} width="" alt="">
             </div>
             <div class="detail">
                 <h3>${title}</h3>

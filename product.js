@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 
                 
-                <div class="">
+                <div class="price-des">
                     <h4>Price</h4>
                     <h3>$${item.price}</h3>
                     <h5>Colors</h5>
@@ -66,12 +66,18 @@ window.addEventListener('DOMContentLoaded', () => {
                     </div>
                    
                 </div>
-                </div>
-                <div class="btn-cart">
-                    <button data-id=${item.id}>Add to cart 
+                <div class="btn-cart btn-des">
+                    <button class="cart-add" data-id=${item.id}>Add to cart 
                     <i class="fas fa-shopping-cart"></i> 
                     </button>
-                </div>`;
+                </div>
+                </div>
+                <div class="btn-cart btn-img">
+                    <button class="cart-add" data-id=${item.id}>Add to cart 
+                    <i class="fas fa-shopping-cart"></i> 
+                    </button>
+                </div>
+                `;
         }
     })
     displayPro = displayPro.join('');

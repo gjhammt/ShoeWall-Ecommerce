@@ -77,7 +77,7 @@ const products = [
         category: "men's shoe",
         colors: '1',
         price: 220,
-        img: ['./images/jordon/one/jordon1.jpg', './imagesjordon/one/jordon2.png', './images/jordon/one/jordon3.png', './images/jordon/one/jordon4.png']
+        img: ['./images/jordon/one/jordon1.jpg', './images/jordon/one/jordon2.png', './images/jordon/one/jordon3.png', './images/jordon/one/jordon4.png']
     },
     {
         id: 33,
